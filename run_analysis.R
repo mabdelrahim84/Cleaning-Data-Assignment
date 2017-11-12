@@ -65,4 +65,4 @@ names(reduced_set) <- c("subject", "activity",columns)
 gcols <- names(reduced_set[1:2])
 dcols <- names(reduced_set)[3:ncol(reduced_set)]
 res <- ddply(reduced_set, gcols, function(x) colMeans(x[dcols]))
-write.table(res,file = "tidy_data.txt")
+write.table(res,file = "tidy_data.txt",row.names = FALSE)
